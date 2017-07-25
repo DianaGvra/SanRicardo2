@@ -43,414 +43,265 @@
 
 
 
-			<div class="feature-bott1">
+<div class="tab_img">
+	<div class="feature-bott1">
 
-				<div style="width: 100%; height: 800px;">
-					<div id="panorama"></div>
-				</div>
-
-
-				<script>
-					pannellum.viewer('panorama', {
-						"default": {
-							"firstScene": "cerrada1",
-							"sceneFadeDuration": 1000,
-							"autoLoad": true
-
-						},
+		<div style="width: 100%; height: 800px;">
+			<div id="panorama"></div>
+		</div>
 
 
-						"scenes": {
-							"cerrada1": {
-								"title": "cerrada 1",
-								"hfov": 110,
-								"pitch": -3,
-								"yaw": 117,
-								"type": "equirectangular",
-								"panorama": "images/121.jpg",
-								"hotSpots": [
-									{
-										"pitch": 0,
-										"yaw": 99,
-										"type": "scene",
-										"text": "entrada",
-										"sceneId": "entrada"
-									},
-									{
-										"pitch": -5,
-										"yaw": 0,
-										"type": "scene",
-										"text": "cerrada 2",
-										"sceneId": "cerrada2",
+		<script>
+			pannellum.viewer('panorama', {
+				"default": {
+					"firstScene": "cerrada1",
+					"sceneFadeDuration": 1000,
+					"autoLoad": true,
+				//	"autoRotate": -2
 
-									}
-								]
+				},
+
+
+				"scenes": {
+					"cerrada1": {
+						"title": "cerrada 1",
+						"hfov": 110,
+						"pitch": -3,
+						"yaw": 117,
+						"type": "equirectangular",
+						"panorama": "images/121.jpg",
+						"hotSpots": [
+							{
+								"pitch": 0,
+								"yaw": 99,
+								"type": "scene",
+								"text": "comedor",
+								"sceneId": "comedor"
+							},
+						]
+					},
+
+
+					"comedor": {
+						"title": "comedor",
+						"hfov": 110,
+						"yaw": 5,
+						"type": "equirectangular",
+						"panorama": "images/comedor1.jpg   ",
+						"hotSpots": [
+							{
+								"pitch": -10,
+								"yaw": 216,
+								"type": "scene",
+								"text": "cocina",
+								"sceneId": "cocina",
+								"targetYaw": -23,
+								"targetPitch": 2
 							},
 
-							"cerrada2": {
-								"title": "cerrada 2",
-								"hfov": 110,
-								"yaw": 5,
-								"type": "equirectangular",
-								"panorama": "images/131.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -175,
-										"yaw": 0,
-										"type": "scene",
-										"text": "cerrada 1",
-										"sceneId": "cerrada1",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": 0,
-										"yaw": 0,
-										"type": "scene",
-										"text": "cerrada 3",
-										"sceneId": "cerrada3",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"cerrada3": {
-								"title": "cerrada 3",
-								"hfov": 110,
-								"yaw": 5,
-								"type": "equirectangular",
-								"panorama": "images/141.jpg   ",
-								"hotSpots": [
-
-									{
-										"pitch": -7,
-										"yaw": 0,
-										"type": "scene",
-										"text": "cerrada 2",
-										"sceneId": "cerrada2",
-										"targetYaw": -23,
-										"targetPitch": 5
-									}
-								]
-							},
-							"entrada": {
-								"title": "entrada",
-								"hfov": 110,
-								"yaw": 5,
-								"type": "equirectangular",
-								"panorama": "images/entrada1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": 216,
-										"type": "scene",
-										"text": "comedor",
-										"sceneId": "comedor",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -20,
-										"yaw": 30,
-										"type": "scene",
-										"text": "cerrada 1",
-										"sceneId": "cerrada1",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"comedor": {
-								"title": "comedor",
-								"hfov": 110,
-								"yaw": 5,
-								"type": "equirectangular",
-								"panorama": "images/comedor1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": 216,
-										"type": "scene",
-										"text": "cocina",
-										"sceneId": "cocina",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -10,
-										"yaw": 170,
-										"type": "scene",
-										"text": "jardin",
-										"sceneId": "jardin",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -0,
-										"yaw": 15,
-										"type": "scene",
-										"text": "escalera",
-										"sceneId": "escalera",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": 0,
-										"yaw": -22,
-										"type": "scene",
-										"text": "entrada",
-										"sceneId": "entrada",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"cocina": {
-								"title": "cocina",
-								"hfov": 110,
-								"yaw": 5,
-								"type": "equirectangular",
-								"panorama": "images/cocina1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": 170,
-										"type": "scene",
-										"text": "jardin",
-										"sceneId": "jardin",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -10,
-										"yaw": 120,
-										"type": "scene",
-										"text": "comedor",
-										"sceneId": "comedor",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
+							{
+								"pitch": -0,
+								"yaw": 15,
+								"type": "scene",
+								"text": "vestibulo",
+								"sceneId": "vestibulo",
+								"targetYaw": -23,
+								"targetPitch": 2
 							},
 
-							"jardin": {
-								"title": "jardin",
-								"hfov": 110,
-								"yaw": 5,
-								"type": "equirectangular",
-								"panorama": "images/jardin1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": 12,
-										"type": "scene",
-										"text": "cocina",
-										"sceneId": "cocina",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -5,
-										"yaw": 42,
-										"type": "scene",
-										"text": "comedor",
-										"sceneId": "comedor",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
+						]
+					},
+					"cocina": {
+						"title": "cocina",
+						"hfov": 110,
+						"yaw": 5,
+						"type": "equirectangular",
+						"panorama": "images/cocina1.jpg   ",
+						"hotSpots": [
+
+							{
+								"pitch": -10,
+								"yaw": 120,
+								"type": "scene",
+								"text": "comedor",
+								"sceneId": "comedor",
+								"targetYaw": -23,
+								"targetPitch": 2
+							}
+						]
+					},
+
+					"vestibulo": {
+						"title": "vestibulo",
+						"hfov": 110,
+						"yaw": -50,
+						"type": "equirectangular",
+						"panorama": "images/vestibulo1.jpg   ",
+						"hotSpots": [
+
+							{
+								"pitch": -10,
+								"yaw": 10,
+								"type": "scene",
+								"text": "cuarto1",
+								"sceneId": "cuarto1",
+								"targetYaw": -23,
+								"targetPitch": 2
 							},
-							"escalera": {
-								"title": "escalera",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/escalera1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": 230,
-										"yaw": 130,
-										"type": "scene",
-										"text": "comedor",
-										"sceneId": "comedor",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": 185,
-										"yaw": 130,
-										"type": "scene",
-										"text": "vestibulo",
-										"sceneId": "vestibulo",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
+
+						]
+					},
+					"cuarto1": {
+						"title": "cuarto1",
+						"hfov": 110,
+						"yaw": -50,
+						"type": "equirectangular",
+						"panorama": "images/cuarto11.jpg   ",
+						"hotSpots": [
+							{
+								"pitch": 0,
+								"yaw": 143,
+								"type": "scene",
+								"text": "vestibulo",
+								"sceneId": "vestibulo",
+								"targetYaw": -23,
+								"targetPitch": 2
 							},
-							"vestibulo": {
-								"title": "vestibulo",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/vestibulo1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": -40,
-										"type": "scene",
-										"text": "cuarto3",
-										"sceneId": "cuarto3",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -10,
-										"yaw": -17,
-										"type": "scene",
-										"text": "cuarto2",
-										"sceneId": "cuarto2",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -10,
-										"yaw": 10,
-										"type": "scene",
-										"text": "cuarto1",
-										"sceneId": "cuarto1",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": -25,
-										"yaw": 105,
-										"type": "scene",
-										"text": "escalera",
-										"sceneId": "escalera",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
+							{
+								"pitch": 0,
+								"yaw": 209,
+								"type": "scene",
+								"text": "vestidor",
+								"sceneId": "vestidor",
+								"targetYaw": -23,
+								"targetPitch": 2
 							},
-							"cuarto1": {
-								"title": "cuarto1",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/cuarto11.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": 0,
-										"yaw": 143,
-										"type": "scene",
-										"text": "vestibulo",
-										"sceneId": "vestibulo",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": 0,
-										"yaw": 209,
-										"type": "scene",
-										"text": "vestidor",
-										"sceneId": "vestidor",
-										"targetYaw": -23,
-										"targetPitch": 2
-									},
-									{
-										"pitch": 0,
-										"yaw": 42,
-										"type": "scene",
-										"text": "balcon",
-										"sceneId": "balcon",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"vestidor": {
-								"title": "vestidor",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/vestidor1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": 0,
-										"yaw": 135,
-										"type": "scene",
-										"text": "cuarto1",
-										"sceneId": "cuarto1",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"balcon": {
-								"title": "balcon",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/balcon1.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": 0,
-										"yaw": 195,
-										"type": "scene",
-										"text": "cuarto1",
-										"sceneId": "cuarto1",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"cuarto2": {
-								"title": "cuarto2",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/cuarto21.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": 135,
-										"type": "scene",
-										"text": "vestibulo",
-										"sceneId": "vestibulo",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-							"cuarto3": {
-								"title": "cuarto3",
-								"hfov": 110,
-								"yaw": -50,
-								"type": "equirectangular",
-								"panorama": "images/cuarto31.jpg   ",
-								"hotSpots": [
-									{
-										"pitch": -10,
-										"yaw": 225,
-										"type": "scene",
-										"text": "vestibulo",
-										"sceneId": "vestibulo",
-										"targetYaw": -23,
-										"targetPitch": 2
-									}
-								]
-							},
-						}
-					});
-				</script>
+							{
+								"pitch": 0,
+								"yaw": 42,
+								"type": "scene",
+								"text": "balcon",
+								"sceneId": "balcon",
+								"targetYaw": -23,
+								"targetPitch": 2
+							}
+						]
+					},
+					"vestidor": {
+						"title": "vestidor",
+						"hfov": 110,
+						"yaw": -50,
+						"type": "equirectangular",
+						"panorama": "images/vestidor1.jpg   ",
+						"hotSpots": [
+							{
+								"pitch": 0,
+								"yaw": 135,
+								"type": "scene",
+								"text": "cuarto1",
+								"sceneId": "cuarto1",
+								"targetYaw": -23,
+								"targetPitch": 2
+							}
+						]
+					},
+					"balcon": {
+						"title": "balcon",
+						"hfov": 110,
+						"yaw": -50,
+						"type": "equirectangular",
+						"panorama": "images/balcon1.jpg   ",
+						"hotSpots": [
+							{
+								"pitch": 0,
+								"yaw": 195,
+								"type": "scene",
+								"text": "cuarto1",
+								"sceneId": "cuarto1",
+								"targetYaw": -23,
+								"targetPitch": 2
+							}
+						]
+					},
+					
+				}
+			});
+		</script>
 
 
 
-			</div>
+	</div>
+</div>
 
 
 
 
+<!--gallery-->
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#horizontalTab').easyResponsiveTabs({
+			type: 'default', //Types: default, vertical, accordion
+			width: 'auto', //auto or any width like 600px
+			fit: true   // 100% fit in a container
+		});
+	});
 
+</script>
+<!--script-->
+<script src="js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+<!--light-box-files -->
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$('.img-top a').Chocolat();
+	});
+</script>
+
+
+<!-- FlexSlider -->
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+	$(function(){
+		SyntaxHighlighter.all();
+	});
+	$(window).load(function(){
+		$('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+				$('body').removeClass('loading');
+			}
+		});
+	});
+</script>
+<!-- FlexSlider -->
+
+
+<!--map start here-->
+<!--copy right start here-->
+<div class="copy-right-main">
+	<div class="container">
+		<div class="copy-right">
+			<p>© Edray Technologies</a></p>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				 var defaults = {
+				 containerID: 'toTop', // fading element id
+				 containerHoverID: 'toTopHover', // fading element hover id
+				 scrollSpeed: 1200,
+				 easingType: 'linear'
+				 };
+				 */
+
+				$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+		</script>
+		<!--<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>-->
+		<!--copy right end here-->
+	</div>
+</div>
 </body>
 </html>
